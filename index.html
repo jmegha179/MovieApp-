@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script type="text/javascript" src="node_modules\jquery\dist\jquery.js"></script>
+    <script type="text/javascript" src="node_modules\angular\angular.min.js"></script>
+    <script type="text/javascript" src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css\app.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/forget.css">
+    <script type="text/javascript" src="node_modules\angular-ui-router\release\angular-ui-router.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="Js\routingConfig.js"></script>
+    <script type="text/javascript" src="Controller\loginController.js"></script>
+    <script type="text/javascript" src="Controller\listController.js"></script>
+    <script type="text/javascript" src="..\Controller\detailsController.js"></script>
+
+
+    <title>Movie App</title>
+</head>
+
+<body ng-app="myApp">
+
+    <nav class="navbar " style="background-color:#002727;height:120px">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#" id="ang">
+                    <img src="../images/movie.jpg" alt="Lights" style="height:80px; ">Movie App</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a ui-sref="Home" class="abc">Home</a>
+                    <a ui-sref="Login" class="abc" style="margin-left:40px">
+                        </span> Login</a>
+                </li>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container myclass ">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div ui-view=""></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

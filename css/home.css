@@ -1,0 +1,17 @@
+#log {
+    height: 500px;
+    width: 500px;
+    background-color: #F5F5F5;
+    border: 1px solid;
+    margin-right: 700px;
+    border-radius: 20px;
+    margin-left: 300px;
+    margin-top: 120px;
+    opacity: 0.8;
+}
+
+#up {
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-bottom: 50px;
+}

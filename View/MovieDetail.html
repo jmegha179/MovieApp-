@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+  <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/Detail.css">
+  <script type="text/javascript" src="..\Controller\detailsController.js"></script>
+
+</head>
+
+<body ng-app="detail" ng-controller="detailCtrl">
+
+  <div style="background-color:#002727;height:120px;color:#006f59;font-size:50px">
+    <center>Details of {{name[index].title}}</center>
+  </div>
+
+  <div id="log">
+    <br>
+    <div style="margin-left:30px ">
+      <label style="font-size:40px">{{name[index].title}}</label>({{name[index].release_date}})</div>
+
+    <h6>
+      <label>
+        <div id="circle">
+          <h2 style="color:white">
+            <label style="margin-top:20px">{{name[index].vote_average * 10}}%</label>
+          </h2>
+        </div>
+      </label>
+      <label style="font-size:20px">User Score</label>
+    </h6>
+    <br>
+    <h3 class="con">OverView</h3>
+    <div class="con">{{name[index].overview}}</div>
+    <br>
+    <h3 class="con">Featured Crew</h3>
+    <h4 class="con">
+      <label style="margin-top:10px">Original Title</label>
+      <label style="margin-left:100px">Popularity</label>
+      <label style="margin-left:100px">Language</label>
+    </h4>
+    <h5 class="con">
+      <label>{{name[index].original_title}}</label>
+      <label style="margin-left:200px">{{name[index].popularity}}</label>
+      <label style="margin-left:120px">{{name[index].original_language}}</label>
+      </h4>
+  </div>
+</body>
+
+</html>

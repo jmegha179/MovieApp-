@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="../css/login.css"> 
+    <div id="log" ng-app="login" ng-controller="loginCtrl" >
+
+        <form name="myForm" style="margin: 20px" class="" id="up" novalidate>
+
+            <center style="margin: 10px">
+                <i class="fa fa-user fa-5x" aria-hidden="true"></i>
+            </center>
+            </h2>
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" class="form-control" name="myName" ng-model="myName" size= 37 style="height:30px black solid" placeholder="Enter User Name"
+              required />
+             <span style="color:red" ng-show="myForm.myName.$dirty && myForm.myName.$invalid">
+                <span ng-show=" myForm.myName.$error.required">username is required.</span></span>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" name="pass" ng-model="pass" size= 37 style="height:30px" class = "int" placeholder="password***"
+                    required />
+                    <span style="color:red" ng-show="myForm.pass.$dirty && myForm.pass.$invalid">
+                            <span ng-show="myForm.pass.$error.required">password is required.</span></span>
+            </div>
+
+            <input type="submit" id="button" class=" btn-default" style="width:100%" value="Login" ng-disabled="myForm.myName.$dirty && myForm.myName.$invalid || myForm.pass.$dirty && myForm.pass.$invalid"
+                ng-click="check(this.form)" value = "Login" >
+            <a href="../View/forget.html" style="color:#396C78;text-decoration:none;">Forget Password </a>
+        </form>
+    </div>

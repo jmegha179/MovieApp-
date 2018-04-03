@@ -1,0 +1,117 @@
+<script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js">
+</script>
+<script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="../node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="..\css\list.css">
+<script type="text/javascript" src="..\Controller\listController.js"></script>
+<title>Music App</title>
+<nav class="navbar " style="background-color:#002727;height:120px">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="color: #006f59;font-size: 60px;margin-left:50px">Popular Movie</a>
+    </div>
+    <form class="navbar-form navbar-left">
+      <div class="form-group">
+        <input type="text" id="txtSearch" style="margin-top:50px" placeholder="Search " ng-model="list">
+        <a style="color:#006f59" href="../index.html" style="margin-left:10px;font-size:50px">Logout</a>
+      </div>
+
+    </form>
+  </div>
+</nav>
+
+<div ng-app="movieList" ng-controller="movieCtrl">
+
+  <form>
+    <div class="container">
+
+      <div class="row" style=" background-color:#E9F7EF  ">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <table>
+            <tbody>
+              <tr ng-repeat=" x in names | filter : list ">
+                <td>
+                  <div class="row">
+                    <h2 style="margin-top:10px ; color:#002727">{{x.title}}</h2>
+                  </div>
+                  <div class="row">{{x.release_date}} </div>
+                  <div class="row">{{x.overview}}</div>
+                  <br>
+                  <div class="row m1">
+                    <button ng-click="edit(x,$index)" style="background-color:#396C78;color:white;width:60px">Edit</button> |
+                    <button ng-click="removeItem($index) " style="background-color:#396C78;color:white  ">Delete</button>
+                  </div>
+
+                  <div ng-if="editingList && m == $index">
+                    <input placeholder=" Modify id" ng-model="edit.id" size=2 0>
+                    <input placeholder=" Modify Name" ng-model="edit.title" size=2 0>
+                    <button ng-click="save()" ng-show="editingList" style="background-color:#396C78;color:white ">Save</button>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <button ng-click="Details($index) " style="background-color:#396C78;color:white">More Info</button>
+                  </div>
+                  <hr>
+                </td>
+              </tr>
+              <hr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+
+      <p class="w3-text-red">{{errortext}}</p>
+
+      <div style="border:1px solid black ; background-color:#E9F7EF;border-radius:5px">
+        <center>
+          <h3 style="margin-top:20px"> Add New Music</h3>
+        </center>
+        <br>
+        <div class="row">
+          <div class="col-md-3"> </div>
+          <div class="col-md-6">
+            <h4 style="margin-left:30px"> MovieID :
+              <input style="margin-left:10px" placeholder="Add id" ng-model="addMe.id" size=3 0 pattern="\d{3}" title="please Enter Valid Id.">
+          </div>
+          </h4>
+          <div class="col-md-3"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3"> </div>
+          <div class="col-md-6">
+            <h4 style="margin-left:30px"> Title :
+              <input style="margin-left :53px" placeholder="Add id" ng-model="addMe.title" size=3 0 pattern="[a-zA-Z]+" Title="please Enter valid Movie name">
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-3"> </div>
+          <div class="col-md-6">
+            <h4>ReleaseDate:
+              <input type="date" style="margin-left :3px ;width:385px" ng-model="addMe.release_date" placeholder="Add Release Date">
+
+            </h4>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-3"> </div>
+          <div class="col-md-6">
+            <h4>OverView :
+              <input ng-model="addMe.overview" placeholder="Add Movie Review" size=3 0 style=" margin-left:23px;height :80px">
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+        <center>
+          <input type="button" ng-click="insert(x)" style="width:150px;margin-top:15px;background-color:#396C78;" value="Save">
+          </button>
+        </center>
+      </div>
+    </div>
+  </form>
+</div>

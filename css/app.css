@@ -1,0 +1,26 @@
+.abc {
+    color: #006f59 !important;
+    /* margin-left: 40px; */
+    font-size: 40px;
+}
+
+.link {
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+#ang {
+    color: #006f59;
+    font-size: 60px;
+    /* margin-left: 30px; */
+}
+
+.im1 {
+    height: 25px;
+    width: 25px;
+    margin-top: 15px;
+}
+
+body {
+    background-color: #006F59;
+}

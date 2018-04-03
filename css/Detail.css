@@ -1,0 +1,31 @@
+#log {
+  height: 650px;
+  width: 750px;
+  background-color: #E9F7EF;
+  border: 1px solid;
+  margin-right: 700px;
+  border-radius: 20px;
+  margin-left: 650px;
+  margin-top: 120px;
+  opacity: 0.8;
+}
+
+#circle {
+  background-color: black;
+  margin: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 200px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+body {
+  /* background-color:#D6DBDF; */
+  background-color: #006F59;
+}
+
+.con {
+  margin-left: 30px;
+  color: #002727;
+}

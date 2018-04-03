@@ -1,0 +1,29 @@
+#log {
+    height: 400px;
+    width: 500px;
+    border: 1px solid black;
+    margin-right: 700px;
+    border-radius: 20px;
+    margin-left: 700px;
+    margin-top: 120px;
+    background-color: #E9F7EF;
+    opacity: 0.8;
+}
+
+#up {
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-bottom: 50px;
+}
+
+#button {
+    color: white;
+    height: 50px;
+    width: 550x;
+    background-color: #396C78;
+    border-radius: 5px;
+}
+
+body {
+    background-color: #006F59;
+}
